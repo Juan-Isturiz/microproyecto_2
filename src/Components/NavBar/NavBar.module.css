@@ -16,10 +16,15 @@
     color:var(--main-white)
 }
 
-
-
 .SubtitlesNavBar {
     display: flex;
     gap: 20px;
-    font-size: 1rem;    
+    font-size: 1rem;
+}
+
+.SubtitlesNavBar a {
+    opacity: 0.6;
+}
+.SubtitlesNavBar > a:hover {
+    opacity: 1;
 }

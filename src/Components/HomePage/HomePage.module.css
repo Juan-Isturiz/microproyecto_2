@@ -1,3 +1,38 @@
 .HomePageDiv {
     color: var(--contrast);
+    background-color: var(--main-white);
+    padding-top: 5rem;
+}
+
+.HomeTitle {
+    font-size: 5rem;
+    padding-bottom: 5rem;
+}
+
+.HomePageDiv button {
+    margin: 3em;
+    color: var(--main-dark);
+    font-weight: 800;
+    background-color: var(--contrast);
+    border: none;
+    font-size: 1.4em;
+    width: 10em;
+    height: 2em;
+}
+
+.MovieBox {
+    background-color: pink;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    
+}
+
+.BoxChild {
+    width: 40%;
+    height: 100px;
 }
