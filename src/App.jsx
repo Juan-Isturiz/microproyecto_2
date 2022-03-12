@@ -2,6 +2,7 @@ import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import HomePage from './Pages/HomePage'
+import MovieView from './Components/MovieView/MoviewView'
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
 
   return (
     <div className="App">
-      <HomePage />
+
+      <MovieView />
     </div>
   )
 }

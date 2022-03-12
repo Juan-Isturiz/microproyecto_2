@@ -1,0 +1,30 @@
+.mainHeader{
+    display: flex;
+    flex-direction: row;
+    background-color: #A877C8;
+    margin: 3rem;
+    border-radius: 16px 16px 16px 16px;
+    align-items: center;
+}
+.mainHeader__img{
+    max-height: 80%;
+    border-radius: 3% 3% 3% 3%;
+    margin: 3rem;
+
+}
+.mainHeader__graldata{
+    color: var(--text-black);
+    text-align: start;
+}
+.mainHeader__text{
+    margin: 2rem;
+    color: var(--text-black);
+    text-align: start;
+}
+.mainHeader__title{
+    font-size: 4rem;
+    align-self: center;
+    color: var(--text-black);
+    margin-top: 3rem;
+    text-align: start
+}
