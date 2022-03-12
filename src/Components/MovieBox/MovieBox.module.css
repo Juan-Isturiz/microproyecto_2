@@ -1,21 +1,23 @@
-.HomePageDiv {
-    color: var(--contrast);
+.MovieBoxDiv {
+    font-size: 2rem;
+    padding-bottom: 3rem;
+    color: var(--main-dark);
     background-color: var(--main-white);
-    padding-top: 5rem;
+    margin: 3rem;
 }
 
-.HomeTitle {
-    font-size: 5rem;
-    padding-bottom: 5rem;
+.MovieBoxDiv h1 {
+    color: var(--contrast);
+    margin-bottom: 3rem;
 }
 
-.HomePageDiv button {
+#HomePageMore {
     margin: 3em;
     color: var(--main-dark);
     font-weight: 800;
     background-color: var(--contrast);
     border: none;
-    font-size: 1.4em;
+    font-size: 1em;
     width: 10em;
     height: 2em;
 }

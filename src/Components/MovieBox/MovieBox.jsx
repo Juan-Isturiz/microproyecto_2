@@ -1,9 +1,9 @@
 import React from 'react'
-import styles from './HomePage.module.css'
+import styles from './MovieBox.module.css'
 
-export default function HomePage() {
+export default function MovieBox() {
   return (
-    <div className={styles.HomePageDiv}>
+    <div className={styles.MovieBoxDiv}>
       <h1 className={styles.HomeTitle}>McMovies</h1>
       <div className={styles.MovieBox}> {/* Here will go 8 movies, brought from the API */}
         <div className={styles.BoxChild}>1</div>
