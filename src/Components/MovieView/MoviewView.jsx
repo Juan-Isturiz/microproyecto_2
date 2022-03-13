@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState,useContext } from "react"
 import axios from "axios"
 import MovieCompany from "../MoviewCompany/MovieCompany"
 import styles from "./MovieView.module.css"
 import MovieDetails from "../MovieDetails/MovieDetails"
+import { AppContext } from '../Context/AppContext'
 const MovieView = (props) => {
     const [moviedata, setmoviedata] = useState({
         original_title: '',
@@ -17,8 +18,8 @@ const MovieView = (props) => {
         status: ''
 
     })
-    const movie_id = 634649//props.movie_id
-    const gral_link = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=bb291031d3efe288820c538284501bf9`
+    const {movieId} = useContext(AppContext)
+    const gral_link = `https://api.themoviedb.org/3/movie/${movieId}?api_key=bb291031d3efe288820c538284501bf9`
     const getMovie = async (url) => {
         try {
             const data = await axios.get(url)

@@ -12,9 +12,11 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 4% 6% 4% 6%;
+    text-decoration: none;
+    color:var(--main-white)
 }
 
-.NavBarDiv a, a:link, a:visited {
+.NavBarDiv a{
     
     text-decoration: none;
     color:var(--main-white)
