@@ -1,21 +1,52 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 import styles from './MovieBox.module.css'
 
+
 export default function MovieBox() {
+  const urlAPI = "https://api.themoviedb.org/3/discover/movie?api_key=bb291031d3efe288820c538284501bf9";
+  const keyAPI = "bb291031d3efe288820c538284501bf9";
+
+  const [MovieList, setMovieList] = useState([{
+    original_title: '',
+    poster_path: null,
+  }])
+
+  const getMovieList = async (url) => {
+    try {
+      const data = await axios.get(url)
+      setMovieList(data.data.results)
+    } catch (error) {
+      alert(error)
+    }
+  }
+  useEffect(()=>{
+    getMovieList("https://api.themoviedb.org/3/discover/movie?api_key=bb291031d3efe288820c538284501bf9")
+  },[])
+  
+  
+  console.log(MovieList)
+  console.log(MovieList[0].title)
+  
+  const renderMovies = () => (
+    MovieList.slice(0, 8).map(movie => (
+      <div className={styles.BoxChild} key = {Math.random()}>
+        {movie.title}
+        <img src= {"https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + `${movie.poster_path}`} alt="" className={styles.PosterBoxChild} />
+      </div>
+    ))
+  )
+
+  
   return (
+    
     <div className={styles.MovieBoxDiv}>
       <h1 className={styles.HomeTitle}>McMovies</h1>
       <div className={styles.MovieBox}> {/* Here will go 8 movies, brought from the API */}
-        <div className={styles.BoxChild}>1</div>
-        <div className={styles.BoxChild}>2</div>
-        <div className={styles.BoxChild}>3</div>
-        <div className={styles.BoxChild}>4</div>
-        <div className={styles.BoxChild}>5</div>
-        <div className={styles.BoxChild}>6</div>
-        <div className={styles.BoxChild}>7</div>
-        <div className={styles.BoxChild}>8</div>
+      {renderMovies()}
+        
       </div>
-
       <div>
         <button id={styles.HomePageMore}>MORE</button>
       </div>
