@@ -12,7 +12,6 @@ const MovieBoxItem = (props) => {
         <div className={styles.BoxChild} key={id}>
             {props.poster != null ? <img src={poster} className={styles.PosterBoxChild} /> : ''}
             <Link to="/MovieView"  className={styles.BoxChildText} onClick={view}>{props.title}</Link>
-            {console.log(id)}
         </div>
     )
 }
