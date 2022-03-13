@@ -33,7 +33,8 @@ export default function MovieBox(props) {
     MovieList.slice(0, props.number).map(movie => (
       <div className={styles.BoxChild} key = {Math.random()}>
         <a href=""> {/* TODO poner links que lleven al MovieDetails */}
-        <img src= {"https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + `${movie.poster_path}`} alt="" className={styles.PosterBoxChild} />
+        {movie.poster_path!=null && <img src= {"https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + `${movie.poster_path}`} alt="" className={styles.PosterBoxChild} />}
+        
         </a>
         {movie.title}
       </div>
