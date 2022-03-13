@@ -9,7 +9,8 @@ import MovieBoxItem from '../MovieBoxItem/MovieBoxItem'
 export default function MovieBox(props) {
   const { movieId, setMovieId } = useContext(AppContext)
   const onClickHandler =(movie)=>{
-    
+    setMovieId(movie)
+    console.log(movieId)
   }
   const [MovieList, setMovieList] = useState([{
     original_title: '',
@@ -39,6 +40,7 @@ export default function MovieBox(props) {
       id = {movie.id}
       poster ={movie.poster_path!=null ? "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + `${movie.poster_path}`: ''}
       title ={movie.title}
+      onMovie ={onClickHandler}
       />
     ))
   )

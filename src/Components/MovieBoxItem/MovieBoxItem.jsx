@@ -7,17 +7,15 @@ const MovieBoxItem = (props) => {
     console.log(refe.current)
     const { id, poster, title } = props
     const { movieId, setMovieId } = useContext(AppContext)
-    let viewer
 
     const view = ()=>{
-        document.getElementById(title)
-        
+        props.onMovie(id)   
     }
     return (
         <div className={styles.BoxChild} key={id}>
             {console.log(id)}
             {props.poster != null ? <img src={poster} className={styles.PosterBoxChild} /> : ''}
-            <a  className={styles.BoxChildText} onClick={() => view()}>{props.title}</a>
+            <Link to='/MovieView' className={styles.BoxChildText} onClick={view}>{props.title}</Link>
         </div>
     )
 }
