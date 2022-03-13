@@ -4,7 +4,7 @@ import axios from 'axios'
 import styles from './MovieBox.module.css'
 
 
-export default function MovieBox() {
+export default function MovieBox(props) {
   const urlAPI = "https://api.themoviedb.org/3/discover/movie?api_key=bb291031d3efe288820c538284501bf9";
   const keyAPI = "bb291031d3efe288820c538284501bf9";
 
@@ -30,10 +30,12 @@ export default function MovieBox() {
   console.log(MovieList[0].title)
   
   const renderMovies = () => (
-    MovieList.slice(0, 8).map(movie => (
+    MovieList.slice(0, props.number).map(movie => (
       <div className={styles.BoxChild} key = {Math.random()}>
-        {movie.title}
+        <a href=""> {/* TODO poner links que lleven al MovieDetails */}
         <img src= {"https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + `${movie.poster_path}`} alt="" className={styles.PosterBoxChild} />
+        </a>
+        {movie.title}
       </div>
     ))
   )

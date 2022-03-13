@@ -23,7 +23,6 @@
 }
 
 .MovieBox {
-    background-color: pink;
     width: 80%;
     margin: auto;
     display: flex;
@@ -36,9 +35,15 @@
 
 .BoxChild {
     width: 40%;
-    height: 100px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
 }
 
+
 .PosterBoxChild {
-    width: 40px;
+    width: 300px;
+    margin-bottom: 15px;
+
 }

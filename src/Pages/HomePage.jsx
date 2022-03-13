@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <div>
         <NavBar />
-        <MovieBox />
+        <MovieBox number = {8} />
         <Footer />
     </div>
   )
