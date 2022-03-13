@@ -1,0 +1,10 @@
+.MovieBox {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    
+}

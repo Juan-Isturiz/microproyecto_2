@@ -4,19 +4,14 @@ import axios from 'axios'
 import styles from './MovieBox.module.css'
 import { AppContext } from '../Context/AppContext'
 import MovieBoxItem from '../MovieBoxItem/MovieBoxItem'
+import MovieBoxList from '../MovieBoxList/MovieBoxList'
 
 
 export default function MovieBox(props) {
-  const { movieId, setMovieId } = useContext(AppContext)
-  const onClickHandler =(movie)=>{
-    setMovieId(movie)
-    console.log(movieId)
-  }
   const [MovieList, setMovieList] = useState([{
     original_title: '',
     poster_path: null,
   }])
-
   const getMovieList = async (url) => {
     try {
       const data = await axios.get(url)
@@ -29,31 +24,26 @@ export default function MovieBox(props) {
     getMovieList("https://api.themoviedb.org/3/discover/movie?api_key=bb291031d3efe288820c538284501bf9")
   },[])
   
-  
-  console.log(MovieList)
-  console.log(MovieList[0].title)
-  
-  const renderMovies = () => (
-    MovieList.slice(0, props.number).map(movie => (
-      <MovieBoxItem
-      key = {Math.random()}
-      id = {movie.id}
-      poster ={movie.poster_path!=null ? "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + `${movie.poster_path}`: ''}
-      title ={movie.title}
-      onMovie ={onClickHandler}
-      />
-    ))
-  )
 
+  //
+  //const renderMovies = () => (
+  //  MovieList.slice(0, props.number).map(movie => (
+  //    <MovieBoxItem
+  //    key = {Math.random()}
+  //    id = {movie.id}
+  //    poster ={movie.poster_path!=null ? "https://www.themoviedb.org/t/p/w600_and_h900_bestv2" + `${movie.poster_path}`: ''}
+  //    title ={movie.title}
+  //    onMovie ={onClickHandler}
+  //    />
+  //  ))
+  //)
+//
   
   return (
     
     <div className={styles.MovieBoxDiv}>
       <h1 className={styles.HomeTitle}>McMovies</h1>
-      <div className={styles.MovieBox}> {/* Here will go 8 movies, brought from the API */}
-      {renderMovies()}
-        
-      </div>
+      <MovieBoxList  number={props.number} MovieList={MovieList}className={styles.MovieBox}/>
       <div>
         <button id={styles.HomePageMore}>MORE</button>
       </div>
