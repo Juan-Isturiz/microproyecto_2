@@ -68,40 +68,36 @@ const MovieView = (props) => {
         }
     }
     return (
-        <>
-            <div className={styles.mainHeader}>
-                <div>
-                    {moviedata.poster_path != null &&
-                        <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2` + moviedata.poster_path} className={styles.mainHeader__img} />}
-                </div>
-                <div >
-                    <h1 className={styles.mainHeader__title}>
-                        {moviedata.original_title}
-                    </h1>
+        <div className={styles.mainHeader}>
+            <div>
+                {moviedata.poster_path != null &&
+                    <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2` + moviedata.poster_path} className={styles.mainHeader__img} />}
+            </div>
+            <div >
+                <h1 className={styles.mainHeader__title}>
+                    {moviedata.original_title}
+                </h1>
 
-                    <p className={styles.mainHeader__graldata}>
-                        {moviedata.release_date} ■ {genresRender(moviedata.genres)}
+                <p className={styles.mainHeader__graldata}>
+                    {moviedata.release_date} ■ {genresRender(moviedata.genres)}
+                </p>
+                <div className={styles.mainHeader__text}>
+                    <h1>Overview</h1>
+                    <p>
+                        {moviedata.overview}
                     </p>
-                    <div className={styles.mainHeader__text}>
-                        <h1>Overview</h1>
-                        <p>
-                            {moviedata.overview}
-                        </p>
-                    </div>
-                    <div className={styles.misc}>
-                        <MovieDetails movieMisc={[
-                            {title:'Language', value: getLanguage()},
-                            {title :'Status', value: moviedata.status,},
-                            {title: 'Budget', value:`${moviedata.budget}$`},
-                            {title: 'Rating', value:moviedata.vote_average }
-                            ]}/>
-                        <MovieCompany productionCompany={moviedata.production_companies}></MovieCompany>
-                    </div>
+                </div>
+                <div className={styles.misc}>
+                    <MovieDetails movieMisc={[
+                        {title:'Language', value: getLanguage()},
+                        {title :'Status', value: moviedata.status,},
+                        {title: 'Budget', value:`${moviedata.budget}$`},
+                        {title: 'Rating', value:moviedata.vote_average }
+                        ]}/>
+                    <MovieCompany productionCompany={moviedata.production_companies}></MovieCompany>
                 </div>
             </div>
-
-        </>
-
+        </div>
     )
 }
 export default MovieView

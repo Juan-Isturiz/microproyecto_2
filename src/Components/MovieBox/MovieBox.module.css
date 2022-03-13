@@ -11,7 +11,7 @@
     margin-bottom: 3rem;
 }
 
-#HomePageMore {
+#LinkToDash {
     margin: 3em;
     color: var(--main-dark);
     font-weight: 800;
@@ -19,6 +19,33 @@
     border: none;
     font-size: 1em;
     width: 10em;
+    height: 2em;
+}
+
+#LinkToDash a{
+    text-decoration: none;
+    color:var(--main-dark)
+}
+#LinkToDash a {
+    opacity: 0.6;
+}
+#LinkToDash > a:hover {
+    opacity: 1;
+}
+
+.PrevNextButtons {
+    display: flex;
+
+}
+
+.PrevNextButtons button {
+    margin: 3em;
+    color: var(--main-dark);
+    font-weight: 800;
+    background-color: var(--contrast);
+    border: none;
+    font-size: 0.7em;
+    width: 15em;
     height: 2em;
 }
 
