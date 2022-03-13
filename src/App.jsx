@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
 import HomePage from './Pages/HomePage'
 import MovieView from './Components/MovieView/MoviewView'
+import LogPage from './Pages/LogPage'
+
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <HomePage />
+      <LogPage />
     </div>
   )
 }
