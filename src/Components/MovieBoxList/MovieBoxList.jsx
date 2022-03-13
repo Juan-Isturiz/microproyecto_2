@@ -9,7 +9,7 @@ const MovieBoxList = (props) => {
     console.log(props)
     const onClickHandler = (id) =>{
           setMovieId(id)
-          console.log(movieId)
+          console.log(movie.id)
     }
     return (
         <div className={styles.MovieBox} >
