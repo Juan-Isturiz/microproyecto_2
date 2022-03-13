@@ -7,9 +7,9 @@ const MovieBoxList = (props) => {
     const { movieId, setMovieId } = useContext(AppContext)
     const { MovieList, number } = props
     console.log(props)
-    const onClickHandler = (id) =>{
-          setMovieId(id)
-          console.log(movie.id)
+    const onClickHandler = (id) => {
+        setMovieId(id)
+        console.log(id)
     }
     return (
         <div className={styles.MovieBox} >
@@ -21,7 +21,7 @@ const MovieBoxList = (props) => {
                     title={movie.title}
                     onMovie={onClickHandler}
                 />))}
-                
+
         </div>
     )
 }

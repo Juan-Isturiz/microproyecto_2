@@ -75,9 +75,7 @@ export default function MovieBox(props) {
       <div>
         {}
         <div className={styles.LinkToDash}>
-          <a>
             <Link to="/MovieDash">MORE</Link>
-          </a>
         </div>
         <div className={styles.PrevNextButtons}>
           <button type='submit' onClick={submitHandlerPrevPage}>prev page</button>
