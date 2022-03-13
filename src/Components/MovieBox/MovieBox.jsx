@@ -73,17 +73,18 @@ export default function MovieBox(props) {
       <h1 className={styles.HomeTitle}>{props.title}</h1>
       <MovieBoxList  number={props.number} MovieList={MovieList}className={styles.MovieBox}/>
       <div>
-        {}
-        <div className={styles.LinkToDash}>
-          <a>
+        {props.home && 
+          <div className={styles.LinkToDash}>
             <Link to="/MovieDash">MORE</Link>
-          </a>
-        </div>
-        <div className={styles.PrevNextButtons}>
-          <button type='submit' onClick={submitHandlerPrevPage}>prev page</button>
-          you are on page {counter}
-          <button type='submit' onClick={submitHandlerNextPage}>next page</button>
-        </div>
+          </div>}
+        
+        {!props.home &&
+          <div className={styles.PrevNextButtons}>
+            <button type='submit' onClick={submitHandlerPrevPage}>prev page</button>
+            you are on page {counter}
+            <button type='submit' onClick={submitHandlerNextPage}>next page</button>
+          </div>}
+
       </div>
     </div>
   )

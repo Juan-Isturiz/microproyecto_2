@@ -11,8 +11,8 @@
     margin-bottom: 3rem;
 }
 
-#LinkToDash {
-    margin: 3em;
+.LinkToDash {
+    margin: auto;
     color: var(--main-dark);
     font-weight: 800;
     background-color: var(--contrast);
@@ -22,14 +22,15 @@
     height: 2em;
 }
 
-#LinkToDash a{
+.LinkToDash a {
+    justify-content: center;
+    height: inherit;
     text-decoration: none;
-    color:var(--main-dark)
+    color:var(--main-dark);
+    opacity: 0.8;
 }
-#LinkToDash a {
-    opacity: 0.6;
-}
-#LinkToDash > a:hover {
+
+.LinkToDash > a:hover {
     opacity: 1;
 }
 

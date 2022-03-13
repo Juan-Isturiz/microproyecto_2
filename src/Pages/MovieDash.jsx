@@ -20,9 +20,7 @@ export default function MovieDash() {
 
   return (
     <div>
-      <MovieBox number={20} url={url} title="DASH" />
-    <button>see next page</button>
-    
+      <MovieBox number={20} url={url} title="DASH" home = {false}/>
     </div>
   )
 }
