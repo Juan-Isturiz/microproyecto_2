@@ -1,0 +1,24 @@
+.company_container{
+    list-style: none;
+}
+.title{
+    text-align: start;
+    margin-left: 4rem;
+}
+.companyItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3rem;
+}
+.companyItem__img{
+    margin: auto;
+    align-self: flex-end;
+}
+.companyItem__text{
+    margin: 1rem;
+    font-weight: 800;
+    align-self: flex-start;
+    text-align: start;
+}

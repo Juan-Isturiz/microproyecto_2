@@ -10,8 +10,7 @@ function App() {
 
   return (
     <div className="App">
-
-      <MovieView />
+      <HomePage />
     </div>
   )
 }

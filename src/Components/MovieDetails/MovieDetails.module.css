@@ -1,0 +1,20 @@
+.miscContainer{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.miscItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 3rem
+}
+.miscItem__title{
+    font-weight: 800;
+    margin: 0.5rem;
+}
+.title{
+    text-align: start;
+    margin-left: 4rem;
+}

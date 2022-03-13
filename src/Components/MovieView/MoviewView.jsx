@@ -2,8 +2,8 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import MovieCompany from "../MoviewCompany/MovieCompany"
 import styles from "./MovieView.module.css"
+import MovieDetails from "../MovieDetails/MovieDetails"
 const MovieView = (props) => {
-    let title = ''
     const [moviedata, setmoviedata] = useState({
         original_title: '',
         genres: [{ name: '' }],
@@ -17,9 +17,8 @@ const MovieView = (props) => {
         status: ''
 
     })
-    const api_key = "bb291031d3efe288820c538284501bf9"
     const movie_id = 634649//props.movie_id
-    const gral_link = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${api_key}`
+    const gral_link = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=bb291031d3efe288820c538284501bf9`
     const getMovie = async (url) => {
         try {
             const data = await axios.get(url)
@@ -88,32 +87,18 @@ const MovieView = (props) => {
                             {moviedata.overview}
                         </p>
                     </div>
+                    <div className={styles.misc}>
+                        <MovieDetails movieMisc={[
+                            {title:'Language', value: getLanguage()},
+                            {title :'Status', value: moviedata.status,},
+                            {title: 'Budget', value:`${moviedata.budget}$`},
+                            {title: 'Rating', value:moviedata.vote_average }
+                            ]}/>
+                        <MovieCompany productionCompany={moviedata.production_companies}></MovieCompany>
+                    </div>
                 </div>
             </div>
-            <ul>
-                <li>
-                    <p>
-                        {`${getLanguage()}`}
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        {moviedata.status}
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        {`${moviedata.budget}$`}
-                    </p>
-                </li>
-            </ul>
 
-
-            <p>
-                {moviedata.vote_average}
-            </p>
-
-            <MovieCompany productionCompany={moviedata.production_companies}></MovieCompany>
         </>
 
     )
