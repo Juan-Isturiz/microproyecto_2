@@ -7,7 +7,6 @@ export default function NavBar() {
         <a href="/"><h1>McMovies</h1></a>  {/* TODO links to log in and register */}
         <div className={styles.SubtitlesNavBar}>
             <a href='/Login'><h2>Log in</h2></a>
-            <a href='/'><h2>Register</h2></a>
         </div>
 
     </div>
