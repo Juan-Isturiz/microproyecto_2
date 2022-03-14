@@ -1,4 +1,5 @@
 import { useState } from "react"
+import styles from "./SearchForm.module.css"
 
 const SearchForm = (props) => {
     const [search, setSearch] = useState("")
@@ -10,13 +11,16 @@ const SearchForm = (props) => {
         setSearch(event.target.text.value)
         event.target.text.value = ""
         props.onSearch(search)
+        // console.log(search)
 
     }
     return (
-        <form onSubmit={submitHandler}>
-            <input type="text" name="text"onChange={onChangeHandler}/>
-            <button type="submit">Search</button>
-        </form>
+        <div className={styles.Container}>
+            <form onSubmit={submitHandler}>
+                <input type="input" name="text"onChange={onChangeHandler} placeholder="Movie title"/>
+                <button type="submit">Search</button>
+            </form>
+        </div>
     )
 }
 export default SearchForm

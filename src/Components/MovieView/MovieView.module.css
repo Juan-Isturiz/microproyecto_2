@@ -1,20 +1,32 @@
 .mainHeader{
     display: flex;
     flex-direction: row;
-    background-color: var(--main-dark);
+    /* background-color: var(--main-dark); */
     margin: 5rem;
     border-radius: 16px 16px 16px 16px;
     align-items: center;
+    
 }
+
+.poster{
+    width: 50%;
+}
+
+
+
 .mainHeader__img{
     /* max-height: 80%; */
-    width: 100%;
+    width: 80%;
     border-radius: 3% 3% 3% 3%;
-    margin: 3rem;
+    margin: 5%;
 }
 
 .mainHeader__img img {
     width: 100%;
+}
+
+.InfoWithoutPoster {
+    width: 50%;
 }
 
 .mainHeader__graldata{
@@ -23,6 +35,7 @@
 }
 .mainHeader__text{
     margin: 2rem;
+    width: inherit;
     color: var(--text-black);
     text-align: start;
 }
@@ -34,14 +47,18 @@
     text-align: start
 }
 .misc{
+    margin-top: 3em;
+    padding: 1em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 5rem;
+    /* margin: 5rem; */
+    width: 50%;
 }
 .misc__gral{
     text-align: start;
     list-style: none;
     display: flex;
     flex-direction: column;
+    width: 50%;
 }

@@ -1,6 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react/cjs/react.development'
 import MovieBox from '../Components/MovieBox/MovieBox'
+import NavBar from '../Components/NavBar/NavBar'
+
+import Search from '../Components/Search/Search'
 
 export default function MovieDash() {
 
@@ -20,7 +23,9 @@ export default function MovieDash() {
 
   return (
     <div>
-      <MovieBox number={20} url={url} title="DASH" home = {false}/>
+      <NavBar />
+      {/* <Search />  */}
+      <MovieBox number={20} url={url} title="Dash" home = {false}/>
     </div>
   )
 }

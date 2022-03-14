@@ -67,7 +67,7 @@ export default function MovieBox(props) {
 // ---------------------------
 
 
-  return (
+  return (  
     
     <div className={styles.MovieBoxDiv}>
       <h1 className={styles.HomeTitle}>{props.title}</h1>

@@ -69,11 +69,11 @@ const MovieView = (props) => {
     }
     return (
         <div className={styles.mainHeader}>
-            <div>
+            <div className={styles.Poster}>
                 {moviedata.poster_path != null &&
                     <img src={`https://www.themoviedb.org/t/p/w600_and_h900_bestv2` + moviedata.poster_path} className={styles.mainHeader__img} />}
             </div>
-            <div >
+            <div className={styles.InfoWithoutPoster}>
                 <h1 className={styles.mainHeader__title}>
                     {moviedata.original_title}
                 </h1>
