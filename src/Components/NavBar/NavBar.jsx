@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './NavBar.module.css'
 
 export default function NavBar() {
+  
   return (
     <div className={styles.NavBarDiv}>
         <a href="/"><h1>McMovies</h1></a>  {/* TODO links to log in and register */}

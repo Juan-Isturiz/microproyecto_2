@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import fire from '../utils/fire';
 import Login from '../Components/LogIn/Login';
-import LoggedNavBar from '../Components/LoggedNavBar/LoggedNavBar';
 import Footer from '../Components/Footer/Footer'
 import MovieBox from '../Components/MovieBox/MovieBox'
 import NavBar from '../Components/NavBar/NavBar';
+import LoggedNavBar from '../Components/LoggedNavBar/LoggedNavBar'
 
 
 function LogPage() {
@@ -87,10 +87,9 @@ function LogPage() {
     <div className="Log">
     {user ? (
       <div>
-      <LoggedNavBar handleLogout={handleLogout} />
+      <LoggedNavBar handleLogout={handleLogout}/>
       <MovieBox number = {8} />
       <Footer />
-
       </div>
       ) : (
         <div>
